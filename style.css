@@ -307,3 +307,16 @@ body {
         font-size: 2.5rem !important;
     }
 }
+/* Premium Allure section enhancements */
+.allure-premium-box {
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    transition: all 0.3s ease;
+}
+.allure-premium-box:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 30px 60px -20px rgba(106, 20, 72, 0.5);
+}
+.allure-premium-box .bg-\[radial-gradient\(ellipse_at_top_right\2c _var\(--tw-gradient-stops\)\)\] {
+    background: radial-gradient(ellipse at top right, rgba(212,175,55,0.1) 0%, transparent 70%);
+}
