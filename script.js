@@ -152,7 +152,7 @@
                 <div class="product-img-wrapper relative aspect-[4/5] bg-surface-container-low flex items-center justify-center overflow-hidden card-inner-frame">
                     <img src="${esc(p.images[0])}" alt="${esc(p.id)}" class="w-full h-full object-cover transition-transform duration-700">
                     <div class="quick-view-overlay">
-                        <button class="bg-primary text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-lg" data-product='${esc(JSON.stringify(p))}'>Quick View</button>
+                        <button class="bg-primary text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-lg" data-product-id="${esc(p.id)}">Quick View</button>
                     </div>
                 </div>
                 <div class="p-5 text-center flex-grow">
@@ -162,14 +162,6 @@
             </div>`).join('');
 
         showMoreBtn.style.display = visibleCount < filteredProducts.length ? 'inline-block' : 'none';
-
-        // Re-attach reveal-on-scroll observer
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-            if (!el.dataset.observed) {
-                el.dataset.observed = 'true';
-                scrollObserver.observe(el);
-            }
-        });
     }
 
     // ========== MODAL ==========
@@ -332,7 +324,7 @@
                 <div class="product-img-wrapper relative aspect-[4/5] bg-surface-container-low flex items-center justify-center overflow-hidden card-inner-frame">
                     <img src="${esc(p.images[0])}" alt="${esc(p.id)}" class="w-full h-full object-cover transition-transform duration-700">
                     <div class="quick-view-overlay">
-                        <button class="bg-primary text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-lg" data-product='${esc(JSON.stringify(p))}'>Quick View</button>
+                        <button class="bg-primary text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-lg" data-product-id="${esc(p.id)}">Quick View</button>
                     </div>
                 </div>
                 <div class="p-5 text-center flex-grow">
@@ -345,14 +337,13 @@
         showMoreBtn.style.display = visibleCount < filteredProducts.length ? 'inline-block' : 'none';
     });
 
-    // Quick view delegation
+    // Quick view delegation – using product ID instead of full JSON
     productContainer.addEventListener('click', e => {
         const btn = e.target.closest('.quick-view-btn');
         if (!btn) return;
-        try {
-            const product = JSON.parse(decodeURIComponent(btn.getAttribute('data-product')));
-            openModal(product);
-        } catch (err) { console.error('Product parse error:', err); }
+        const id = btn.getAttribute('data-product-id');
+        const product = allProducts.find(p => p.id === id);
+        if (product) openModal(product);
     });
 
     // ========== HASH ROUTING ==========
