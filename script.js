@@ -69,10 +69,14 @@
                 minOrder: p.minOrder || 100,
                 description: p.description || 'A beautiful handcrafted design.'
             }));
+
             buildCategories();
             buildFilterButtons();
             applyFilters();
             checkHash();
+
+            // Attach product‑related event listeners AFTER data is ready
+            attachProductListeners();
         })
         .catch(err => {
             console.error('Failed to load cards.json:', err);
@@ -162,6 +166,51 @@
             </div>`).join('');
 
         showMoreBtn.style.display = visibleCount < filteredProducts.length ? 'inline-block' : 'none';
+    }
+
+    // ========== ATTACH ALL PRODUCT‑RELATED LISTENERS (called after data loads) ==========
+    function attachProductListeners() {
+        // Quick View
+        productContainer.addEventListener('click', e => {
+            const btn = e.target.closest('.quick-view-btn');
+            if (!btn) return;
+            const id = btn.getAttribute('data-product-id');
+            const product = allProducts.find(p => p.id === id);
+            if (product) openModal(product);
+        });
+
+        // Show More
+        showMoreBtn.addEventListener('click', () => {
+            const nextCount = Math.min(visibleCount + ITEMS_PER_PAGE, filteredProducts.length);
+            const newHTML = filteredProducts.slice(visibleCount, nextCount).map(p => `
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="product-img-wrapper relative aspect-[4/5] bg-surface-container-low flex items-center justify-center overflow-hidden card-inner-frame">
+                        <img src="${esc(p.images[0])}" alt="${esc(p.id)}" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="quick-view-overlay">
+                            <button class="bg-primary text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-lg" data-product-id="${esc(p.id)}">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center flex-grow">
+                        <h4 class="font-display text-xl text-plum-deep">${esc(p.id)}</h4>
+                        <p class="text-sm text-on-surface-variant mt-1">Rs. ${p.price} / card</p>
+                    </div>
+                </div>`).join('');
+            productContainer.insertAdjacentHTML('beforeend', newHTML);
+            visibleCount = nextCount;
+            showMoreBtn.style.display = visibleCount < filteredProducts.length ? 'inline-block' : 'none';
+        });
+
+        // Search
+        document.getElementById('portfolio-search').addEventListener('input', e => {
+            currentSearchQuery = e.target.value;
+            applyFilters();
+        });
+
+        // Sort
+        document.getElementById('portfolio-sort').addEventListener('change', e => {
+            currentSort = e.target.value;
+            applyFilters();
+        });
     }
 
     // ========== MODAL ==========
@@ -304,46 +353,6 @@
             modalShareBtn.classList.add('copied');
             setTimeout(() => modalShareBtn.classList.remove('copied'), 2000);
         } catch { alert('Copy failed. Link: ' + url); }
-    });
-
-    // ========== SEARCH & SORT ==========
-    document.getElementById('portfolio-search').addEventListener('input', e => {
-        currentSearchQuery = e.target.value;
-        applyFilters();
-    });
-    document.getElementById('portfolio-sort').addEventListener('change', e => {
-        currentSort = e.target.value;
-        applyFilters();
-    });
-
-    // ========== SHOW MORE ==========
-    showMoreBtn.addEventListener('click', () => {
-        const nextCount = Math.min(visibleCount + ITEMS_PER_PAGE, filteredProducts.length);
-        const newHTML = filteredProducts.slice(visibleCount, nextCount).map(p => `
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
-                <div class="product-img-wrapper relative aspect-[4/5] bg-surface-container-low flex items-center justify-center overflow-hidden card-inner-frame">
-                    <img src="${esc(p.images[0])}" alt="${esc(p.id)}" class="w-full h-full object-cover transition-transform duration-700">
-                    <div class="quick-view-overlay">
-                        <button class="bg-primary text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-lg" data-product-id="${esc(p.id)}">Quick View</button>
-                    </div>
-                </div>
-                <div class="p-5 text-center flex-grow">
-                    <h4 class="font-display text-xl text-plum-deep">${esc(p.id)}</h4>
-                    <p class="text-sm text-on-surface-variant mt-1">Rs. ${p.price} / card</p>
-                </div>
-            </div>`).join('');
-        productContainer.insertAdjacentHTML('beforeend', newHTML);
-        visibleCount = nextCount;
-        showMoreBtn.style.display = visibleCount < filteredProducts.length ? 'inline-block' : 'none';
-    });
-
-    // Quick view delegation – using product ID instead of full JSON
-    productContainer.addEventListener('click', e => {
-        const btn = e.target.closest('.quick-view-btn');
-        if (!btn) return;
-        const id = btn.getAttribute('data-product-id');
-        const product = allProducts.find(p => p.id === id);
-        if (product) openModal(product);
     });
 
     // ========== HASH ROUTING ==========
