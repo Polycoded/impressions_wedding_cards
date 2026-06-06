@@ -404,6 +404,16 @@
 
     <!-- Hero (text-only) -->
     <section class="relative h-screen flex items-center pt-20 overflow-hidden bg-cream-base" id="home">
+        <section class="relative h-screen flex items-center pt-20 overflow-hidden bg-cream-base" id="home">
+    <!-- ===== WATERMARK – Under Construction ===== -->
+    <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none select-none opacity-10" aria-hidden="true">
+        <span class="font-display text-[12vw] text-primary rotate-[-25deg] tracking-widest whitespace-nowrap">
+            UNDER CONSTRUCTION
+        </span>
+    </div>
+    <!-- rest of the hero content -->
+    ...
+</section>
         <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
         <div class="max-w-4xl mx-auto px-6 w-full text-center z-10">
@@ -627,18 +637,26 @@
     });
 
     // ========== EMBEDDED PRODUCT DATA ==========
-    const allProducts = [
-        { id: "ALLURE-001", category: "The Allure Series", price: 85, images: ["https://lh3.googleusercontent.com/aida/AP1WRLvFXATIgDxPaDr1C3QHY1WYVCiANIbU9E2KLL8wzlt3M1uRQrju7yLvmC50o0BXL9GezzP2sTYs7Arigny2rRsFWa9PRXbN8iMdrhGUdBHTmoiItvpcv9uZ5GJZt3GLsxlypRSZlDFkSOJGZ5LMShFX0EoE5bAK8YHf9PaLFVWyd8PKDVBDb_GcmQgpVkJmvB7tQZlo2uYrQlrUe_2xf_5lK2d5s2CZ0o26tnmFfkrzO4T1JynhuxYbK8ye"], minOrder:100, size:"5x7 inches", material:"Lavender textured cardstock", description:"Sophisticated textures and subtle hues for the discerning couple." },
-        { id: "ALLURE-002", category: "The Allure Series", price: 95, images: ["https://lh3.googleusercontent.com/aida/AP1WRLvFXATIgDxPaDr1C3QHY1WYVCiANIbU9E2KLL8wzlt3M1uRQrju7yLvmC50o0BXL9GezzP2sTYs7Arigny2rRsFWa9PRXbN8iMdrhGUdBHTmoiItvpcv9uZ5GJZt3GLsxlypRSZlDFkSOJGZ5LMShFX0EoE5bAK8YHf9PaLFVWyd8PKDVBDb_GcmQgpVkJmvB7tQZlo2uYrQlrUe_2xf_5lK2d5s2CZ0o26tnmFfkrzO4T1JynhuxYbK8ye"], minOrder:100, size:"5x7 inches", material:"Soft touch laminate", description:"Velvety finish with gold foil accents." },
-        { id: "ROYAL-001", category: "Royal Box Invitations", price: 150, images: ["https://lh3.googleusercontent.com/aida/AP1WRLuh2OhTG6BzfTE__edMiiu6yXFyfQ3otXjr48Hsw9g5dkCiakJMQavrcDhYTM02CUHRf8T_RyMNke6YsJ7r59SSOZghstKlWSLl9D3y8Un-Zm2IvkrSKvqNW-NuEmxuppX7xMd8Np-_FbvKOi71-N-tA6ZMV67HeO5w-6alpXe-AMnnKeMouhYkIQ32FcEbebp5LAR-1iGgCU5MyI_ynpayEf4faHfOudh2JU0F__5Bdj9LF4Re71AIFVJQ"], minOrder:50, size:"Box: 8x8 inches", material:"Velvet-lined box with magnetic closure", description:"Grand presentations housed in velvet-lined handcrafted boxes." },
-        { id: "ROYAL-002", category: "Royal Box Invitations", price: 180, images: ["https://lh3.googleusercontent.com/aida/AP1WRLuh2OhTG6BzfTE__edMiiu6yXFyfQ3otXjr48Hsw9g5dkCiakJMQavrcDhYTM02CUHRf8T_RyMNke6YsJ7r59SSOZghstKlWSLl9D3y8Un-Zm2IvkrSKvqNW-NuEmxuppX7xMd8Np-_FbvKOi71-N-tA6ZMV67HeO5w-6alpXe-AMnnKeMouhYkIQ32FcEbebp5LAR-1iGgCU5MyI_ynpayEf4faHfOudh2JU0F__5Bdj9LF4Re71AIFVJQ"], minOrder:50, size:"Box: 8x8 inches", material:"Suede-lined with satin ribbon", description:"Opulent boxed invitation with laser-cut details." },
-        { id: "HERITAGE-001", category: "Traditional Heritage", price: 65, images: ["https://lh3.googleusercontent.com/aida/AP1WRLtT5bcJd8Eu2MAeXGiHRDVqvEZ5Cs09ose3ixUhN2lBoKtKzk18_fbVQfzYi7cO2FSygYi44dciUrasUqurZHRedf2aDyt8XyauJ8G9l6VfrQkFpf1opYKBmxvH5TLG_RTTgE-_ZByQxj5miLeLUjxtY3vadm_REQk857jeWDPg_Fbk7iFHhsqa9S7Uzfq2y6YJ3-oHyRDog6PU9mvpXsKIjuTezqHx4QRI8A73ufumEKhenlR6E_QVQptB"], minOrder:100, size:"6x8 inches", material:"Handmade paper with silk border", description:"Rich cultural motifs blended with contemporary premium finishes." },
-        { id: "HERITAGE-002", category: "Traditional Heritage", price: 75, images: ["https://lh3.googleusercontent.com/aida/AP1WRLtT5bcJd8Eu2MAeXGiHRDVqvEZ5Cs09ose3ixUhN2lBoKtKzk18_fbVQfzYi7cO2FSygYi44dciUrasUqurZHRedf2aDyt8XyauJ8G9l6VfrQkFpf1opYKBmxvH5TLG_RTTgE-_ZByQxj5miLeLUjxtY3vadm_REQk857jeWDPg_Fbk7iFHhsqa9S7Uzfq2y6YJ3-oHyRDog6PU9mvpXsKIjuTezqHx4QRI8A73ufumEKhenlR6E_QVQptB"], minOrder:100, size:"6x8 inches", material:"Cotton paper with gold embossing", description:"Traditional elegance with modern gold detailing." },
-        { id: "MINIMAL-001", category: "Modern Minimalist", price: 55, images: ["https://lh3.googleusercontent.com/aida/AP1WRLsQA5v3wfIia9ckWdnwLA6joLbyJpyPLBkSTOD6aqcMAakXDKZlY8Tvg7iOd5CQUPsrSCXmijD6xyFNJNLSDzgkBw1sUyuwc03WFdDRc10sJSmIWLD_eTibTF-gqfXTVZRy9elltImUbsdjxTFnrhMgpsJqhqMbVnpU1hBnE2mf_ndZCDBPxPImZizpHmbvrzZf8Xy3vs_KnSmY0n-J03vKhUb6KmVvfVq1o4ZAT0yH4hD2zgGhPDLRYbEV"], minOrder:100, size:"5x7 inches", material:"Premium smooth cardstock", description:"Clean lines and ample whitespace for the modern couple." },
-        { id: "MINIMAL-002", category: "Modern Minimalist", price: 60, images: ["https://lh3.googleusercontent.com/aida/AP1WRLsQA5v3wfIia9ckWdnwLA6joLbyJpyPLBkSTOD6aqcMAakXDKZlY8Tvg7iOd5CQUPsrSCXmijD6xyFNJNLSDzgkBw1sUyuwc03WFdDRc10sJSmIWLD_eTibTF-gqfXTVZRy9elltImUbsdjxTFnrhMgpsJqhqMbVnpU1hBnE2mf_ndZCDBPxPImZizpHmbvrzZf8Xy3vs_KnSmY0n-J03vKhUb6KmVvfVq1o4ZAT0yH4hD2zgGhPDLRYbEV"], minOrder:100, size:"5x7 inches", material:"Recycled kraft with white ink", description:"Eco-chic minimalist design." },
-        { id: "FLORAL-001", category: "Floral Elegance", price: 70, images: ["https://lh3.googleusercontent.com/aida/AP1WRLv5a3u9am-QhlvnmQS4D0jzengZnU-KjKMnzxyq5EJmPuqqJXwmhusmrPCYN72ocQA82wrHaBqzmVv8-unGllbIi5dreWpUlyJBG7e3QTBIxM5rh8-ML5HC6yRBAnNbWUOgX9yVw5tMbAVniAbaAJpPrKlfOm2gIoBPXp8pDWqYkehcH0ObNVo7pM8nNk6-N5jkJfs_FwMSEpf8rqlBB4yuicJlCMlD5R9ebdO_i3Ak8A2vPReI0A5VCnz_"], minOrder:100, size:"5x7 inches", material:"Deckled-edge watercolor paper", description:"Hand-painted botanical illustrations." },
-        { id: "FLORAL-002", category: "Floral Elegance", price: 80, images: ["https://lh3.googleusercontent.com/aida/AP1WRLv5a3u9am-QhlvnmQS4D0jzengZnU-KjKMnzxyq5EJmPuqqJXwmhusmrPCYN72ocQA82wrHaBqzmVv8-unGllbIi5dreWpUlyJBG7e3QTBIxM5rh8-ML5HC6yRBAnNbWUOgX9yVw5tMbAVniAbaAJpPrKlfOm2gIoBPXp8pDWqYkehcH0ObNVo7pM8nNk6-N5jkJfs_FwMSEpf8rqlBB4yuicJlCMlD5R9ebdO_i3Ak8A2vPReI0A5VCnz_"], minOrder:100, size:"5x7 inches", material:"Textured linen with foil stamp", description:"Blooming florals with delicate gold highlights." }
-    ];
+let allProducts = [];
+fetch('./data/cards.json')
+    .then(res => res.json())
+    .then(data => {
+        allProducts = data.map(p => ({
+            ...p,
+            images: p.images && p.images.length ? p.images : ['assets/cards/placeholder.jpg'],
+            minOrder: p.minOrder || 100,
+            description: p.description || 'A beautiful handcrafted design.'
+        }));
+        // Now that products are loaded, initialise the page
+        buildCategories();
+        buildFilterButtons();
+        applyFilters();
+        checkHash();
+    })
+    .catch(err => {
+        console.error('Failed to load cards.json', err);
+        productContainer.innerHTML = '<p class="text-center text-on-surface-variant">Unable to load designs. Please try again later.</p>';
+    });
 
     // ---------- CONSTANTS & STATE ----------
     const WHATSAPP_NUMBER = '919526577999';
