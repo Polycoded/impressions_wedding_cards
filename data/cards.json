@@ -1,0 +1,1809 @@
+[
+  {
+    "id": "AL 039",
+    "category": "MINIMAL",
+    "price": 34,
+    "featured": false,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE",
+    "description": "BLIND DEBOSS + DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-039-1.jpeg",
+      "assets/cards/al-039-2.jpeg",
+      "assets/cards/al-039-3.jpeg",
+      "assets/cards/al-039-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-039-1.jpeg",
+      "assets/cards/original/al-039-2.jpeg",
+      "assets/cards/original/al-039-3.jpeg",
+      "assets/cards/original/al-039-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "top-right",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "038",
+    "category": "MODERN",
+    "price": 48,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "270 GSM GOLD METALIC  + 240 GSM ORIGINAL TEXTURED",
+    "description": "BLIND DEBOSS + GOLD FOIL ON ENVELOPE +DIGITAL PRINT ON INNER SHEET",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/038-1.jpeg",
+      "assets/cards/038-2.jpeg",
+      "assets/cards/038-3.jpeg",
+      "assets/cards/038-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/038-1.jpeg",
+      "assets/cards/original/038-2.jpeg",
+      "assets/cards/original/038-3.jpeg",
+      "assets/cards/original/038-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "037",
+    "category": "MODERN",
+    "price": 48,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "280 GSM PREMIUM JET BLACK  + 240 GSM ORIGINAL TEXTURED",
+    "description": "BLIND DEBOSS + SILVER FOIL ON ENVELOPE +DIGITAL PRINT ON INNER SHEET",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/037-1.jpeg",
+      "assets/cards/037-2.jpeg",
+      "assets/cards/037-3.jpeg",
+      "assets/cards/037-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/037-1.jpeg",
+      "assets/cards/original/037-2.jpeg",
+      "assets/cards/original/037-3.jpeg",
+      "assets/cards/original/037-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "036",
+    "category": "MODERN",
+    "price": 42,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "270 GSM SMOOTH RED + 240 GSM ORIGINAL TEXTURED",
+    "description": "BLIND DEBOSS +GOLD FOIL ON ENVELOPE +DIGITAL PRINT ON INNER SHEET",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "top-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_red.png",
+    "images": [
+      "assets/cards/036-1.jpeg",
+      "assets/cards/036-2.jpeg",
+      "assets/cards/036-3.jpeg",
+      "assets/cards/036-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/036-1.jpeg",
+      "assets/cards/original/036-2.jpeg",
+      "assets/cards/original/036-3.jpeg",
+      "assets/cards/original/036-4.jpeg"
+    ],
+    "imageWatermarks": [
+      null,
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "red"
+      }
+    ]
+  },
+  {
+    "id": "035",
+    "category": "MODERN",
+    "price": 47,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "270 GSM SILVER METALIC + 240 GSM ORIGINAL TEXTURED",
+    "description": "BLIND DEBOSS + SILVER FOIL ON ENVELOPE +DIGITAL PRINT ON INNER SHEET",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/035-1.jpeg",
+      "assets/cards/035-2.jpeg",
+      "assets/cards/035-3.jpeg",
+      "assets/cards/035-4.jpeg",
+      "assets/cards/035-5.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/035-1.jpeg",
+      "assets/cards/original/035-2.jpeg",
+      "assets/cards/original/035-3.jpeg",
+      "assets/cards/original/035-4.jpeg",
+      "assets/cards/original/035-5.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "black"
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "id": "034",
+    "category": "MODERN",
+    "price": 42,
+    "featured": false,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "270 GSM MEROON  +  240 GSM ORIGINAL TEXTURED",
+    "description": "BLIND DEBOSS + DOLD FOIL ON ENVELOPE +DIGITAL PRINT ON INNER SHEET",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/034-1.jpeg",
+      "assets/cards/034-2.jpeg",
+      "assets/cards/034-3.jpeg",
+      "assets/cards/034-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/034-1.jpeg",
+      "assets/cards/original/034-2.jpeg",
+      "assets/cards/original/034-3.jpeg",
+      "assets/cards/original/034-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "brown"
+      },
+      {
+        "apply": true,
+        "pos": "top-right",
+        "size": "medium",
+        "color": "brown"
+      },
+      {
+        "apply": true,
+        "pos": "top-right",
+        "size": "medium",
+        "color": "brown"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "033",
+    "category": "MODERN",
+    "price": 47,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X 195 MM",
+    "material": "270 GSM GREEN METALIC  +  240 GSM ORIGINAL TEXTURED",
+    "description": "BLIND DEBOSS + GOLD FOIL ON ENVELOPE +DIGITAL PRINT ON INNER SHEET",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/033-1.jpeg",
+      "assets/cards/033-2.jpeg",
+      "assets/cards/033-3.jpeg",
+      "assets/cards/033-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/033-1.jpeg",
+      "assets/cards/original/033-2.jpeg",
+      "assets/cards/original/033-3.jpeg",
+      "assets/cards/original/033-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "top-center",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-center",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-right",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "032",
+    "category": "MINIMAL",
+    "price": 39,
+    "featured": false,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "300 GSM PEARL METALIC  + 270 GSM MEHNDI GREEN",
+    "description": "BLIND EMBOSS + DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/032-1.jpeg",
+      "assets/cards/032-2.jpeg",
+      "assets/cards/032-3.jpeg",
+      "assets/cards/032-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/032-1.jpeg",
+      "assets/cards/original/032-2.jpeg",
+      "assets/cards/original/032-3.jpeg",
+      "assets/cards/original/032-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "AL 031",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "300 GSM SAND BROWN + 240 GSM ORIGINAL TEXTURED WHITE",
+    "description": "BLIND EMBOSS + DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-031-1.jpeg",
+      "assets/cards/al-031-2.jpeg",
+      "assets/cards/al-031-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-031-1.jpeg",
+      "assets/cards/original/al-031-2.jpeg",
+      "assets/cards/original/al-031-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "large",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 030",
+    "category": "MINIMAL",
+    "price": 30,
+    "featured": true,
+    "minOrder": 200,
+    "size": "200MM X 200 MM",
+    "material": "300 GSM COFFEE BROWN + 240 GSM ORIGINAL TEXTURED WHITE",
+    "description": "COFFEE BROWN FOIL PRINTING + DIGITAL PRINTING",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-right",
+    "watermarkSize": "large",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-030-1.jpeg",
+      "assets/cards/al-030-2.jpeg",
+      "assets/cards/al-030-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-030-1.jpeg",
+      "assets/cards/original/al-030-2.jpeg",
+      "assets/cards/original/al-030-3.jpeg"
+    ],
+    "imageWatermarks": [
+      null,
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 029",
+    "category": "MINIMAL",
+    "price": 30,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE+ 320 GSM ORIGINAL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-029-1.jpeg",
+      "assets/cards/al-029-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-029-1.jpeg",
+      "assets/cards/original/al-029-2.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "blue"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "blue"
+      }
+    ]
+  },
+  {
+    "id": "AL 028",
+    "category": "MINIMAL",
+    "price": 30,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE+ 320 GSM ORIGINAL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-028-1.jpeg",
+      "assets/cards/al-028-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-028-1.jpeg",
+      "assets/cards/original/al-028-2.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 027",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-027-1.jpeg",
+      "assets/cards/al-027-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-027-1.jpeg",
+      "assets/cards/original/al-027-2.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "AL 026",
+    "category": "MODERN",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "218 MM X 158 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-026-1.jpeg",
+      "assets/cards/al-026-2.jpeg",
+      "assets/cards/al-026-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-026-1.jpeg",
+      "assets/cards/original/al-026-2.jpeg",
+      "assets/cards/original/al-026-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "id": "AL 025",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": true,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "PREMIUM DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-025-1.jpeg",
+      "assets/cards/al-025-2.jpeg",
+      "assets/cards/al-025-3.jpeg",
+      "assets/cards/al-025-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-025-1.jpeg",
+      "assets/cards/original/al-025-2.jpeg",
+      "assets/cards/original/al-025-3.jpeg",
+      "assets/cards/original/al-025-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "blue"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 024",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "210×155 mm",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "PREMIUM DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-024-1.jpeg",
+      "assets/cards/al-024-2.jpeg",
+      "assets/cards/al-024-3.jpeg",
+      "assets/cards/al-024-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-024-1.jpeg",
+      "assets/cards/original/al-024-2.jpeg",
+      "assets/cards/original/al-024-3.jpeg",
+      "assets/cards/original/al-024-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "violet"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "violet"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "violet"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "violet"
+      }
+    ]
+  },
+  {
+    "id": "AL 023",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "PREMIUM DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-023-1.jpeg",
+      "assets/cards/al-023-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-023-1.jpeg",
+      "assets/cards/original/al-023-2.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "red"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "red"
+      }
+    ]
+  },
+  {
+    "id": "AL 022",
+    "category": "MINIMAL",
+    "price": 42,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED PRINTED  BASE",
+    "description": "PREMIUM DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-022-1.jpeg",
+      "assets/cards/al-022-2.jpeg",
+      "assets/cards/al-022-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-022-1.jpeg",
+      "assets/cards/original/al-022-2.jpeg",
+      "assets/cards/original/al-022-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 021",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": true,
+    "minOrder": 100,
+    "size": "210×155 mm",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE  BASE",
+    "description": "PREMIUM DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-021-1.jpeg",
+      "assets/cards/al-021-2.jpeg",
+      "assets/cards/al-021-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-021-1.jpeg",
+      "assets/cards/original/al-021-2.jpeg",
+      "assets/cards/original/al-021-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-center",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-center",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 020",
+    "category": "MINIMAL",
+    "price": 37,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED PRINTED  BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-020-1.jpeg",
+      "assets/cards/al-020-2.jpeg",
+      "assets/cards/al-020-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-020-1.jpeg",
+      "assets/cards/original/al-020-2.jpeg",
+      "assets/cards/original/al-020-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "red"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "red"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "red"
+      }
+    ]
+  },
+  {
+    "id": "AL 019",
+    "category": "MINIMAL",
+    "price": 37,
+    "featured": false,
+    "minOrder": 100,
+    "size": "210×155 mm",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED PRINTED  BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-019-1.jpeg",
+      "assets/cards/al-019-2.jpeg",
+      "assets/cards/al-019-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-019-1.jpeg",
+      "assets/cards/original/al-019-2.jpeg",
+      "assets/cards/original/al-019-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "blue"
+      }
+    ]
+  },
+  {
+    "id": "AL 018",
+    "category": "MINIMAL",
+    "price": 37,
+    "featured": true,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED PRINTED  BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-018-1.jpeg",
+      "assets/cards/al-018-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-018-1.jpeg",
+      "assets/cards/original/al-018-2.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "blue"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "blue"
+      }
+    ]
+  },
+  {
+    "id": "AL 017",
+    "category": "MODERN",
+    "price": 42,
+    "featured": true,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED PRINTED  BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-017-1.jpeg",
+      "assets/cards/al-017-2.jpeg",
+      "assets/cards/al-017-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-017-1.jpeg",
+      "assets/cards/original/al-017-2.jpeg",
+      "assets/cards/original/al-017-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "large",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 016",
+    "category": "MODERN",
+    "price": 53,
+    "featured": false,
+    "minOrder": 200,
+    "size": "218 MM X 158 MM",
+    "material": "240 GSM MILL TEXTURED WHITE",
+    "description": "PREMIUM DIGITAL PRINTING + GOLD FOILING ON ENVELOPE",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-016-1.jpeg",
+      "assets/cards/al-016-2.jpeg",
+      "assets/cards/al-016-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-016-1.jpeg",
+      "assets/cards/original/al-016-2.jpeg",
+      "assets/cards/original/al-016-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "id": "AL 015",
+    "category": "MINIMAL",
+    "price": 50,
+    "minOrder": 100,
+    "featured": false,
+    "minOrder": 100,
+    "size": "218 MM X 158 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-015-1.jpeg",
+      "assets/cards/al-015-2.jpeg",
+      "assets/cards/al-015-3.jpeg",
+      "assets/cards/al-015-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-015-1.jpeg",
+      "assets/cards/original/al-015-2.jpeg",
+      "assets/cards/original/al-015-3.jpeg",
+      "assets/cards/original/al-015-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "id": "AL 014",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-right",
+    "watermarkSize": "xlarge",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-014-1.jpeg",
+      "assets/cards/al-014-2.jpeg",
+      "assets/cards/al-014-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-014-1.jpeg",
+      "assets/cards/original/al-014-2.jpeg",
+      "assets/cards/original/al-014-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "large",
+        "color": "gold"
+      },
+      null
+    ]
+  },
+  {
+    "id": "AL 013",
+    "category": "MINIMAL",
+    "price": 37,
+    "featured": true,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-013-1.jpeg",
+      "assets/cards/al-013-2.jpeg",
+      "assets/cards/al-013-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-013-1.jpeg",
+      "assets/cards/original/al-013-2.jpeg",
+      "assets/cards/original/al-013-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "id": "AL 012",
+    "category": "MINIMAL",
+    "price": 39,
+    "featured": false,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "300 GSM PREMIUM PEARL WHITE",
+    "description": "DIGITAL PRINTING+ GOLD FOIL PRINTING",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 1400
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-012-1.jpeg",
+      "assets/cards/al-012-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-012-1.jpeg",
+      "assets/cards/original/al-012-2.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "top-right",
+        "size": "medium",
+        "color": "gold"
+      },
+      {
+        "apply": true,
+        "pos": "top-right",
+        "size": "medium",
+        "color": "gold"
+      }
+    ]
+  },
+  {
+    "id": "AL 011",
+    "category": "MINIMAL",
+    "price": 40,
+    "featured": false,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "280 GSM VIRGIN CRAFT + 270 GSM TEXTURED OFF WHITE",
+    "description": "PREMIUM GOLD FOIL PRINTING",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 2500
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_brown.png",
+    "images": [
+      "assets/cards/al-011-1.jpeg",
+      "assets/cards/al-011-2.jpeg",
+      "assets/cards/al-011-3.jpeg",
+      "assets/cards/al-011-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-011-1.jpeg",
+      "assets/cards/original/al-011-2.jpeg",
+      "assets/cards/original/al-011-3.jpeg",
+      "assets/cards/original/al-011-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "top-center",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "AL 010",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_blue.png",
+    "images": [
+      "assets/cards/al-010-1.jpeg",
+      "assets/cards/al-010-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-010-1.jpeg",
+      "assets/cards/original/al-010-2.jpeg"
+    ],
+    "imageWatermarks": [
+      null,
+      null
+    ]
+  },
+  {
+    "id": "AL 009",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-009-1.jpeg",
+      "assets/cards/al-009-2.jpeg",
+      "assets/cards/al-009-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-009-1.jpeg",
+      "assets/cards/original/al-009-2.jpeg",
+      "assets/cards/original/al-009-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "top-left",
+        "size": "medium",
+        "color": "blue"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "blue"
+      },
+      {
+        "apply": true,
+        "pos": "bottom-right",
+        "size": "medium",
+        "color": "blue"
+      }
+    ]
+  },
+  {
+    "id": "AL 008",
+    "category": "MINIMAL",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM ORIGINAL TEXTURED WHITE + 320 GSM ORIGINAL TEXTURED WHITE BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_violet.png",
+    "images": [
+      "assets/cards/al-008-1.jpeg",
+      "assets/cards/al-008-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-008-1.jpeg",
+      "assets/cards/original/al-008-2.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "violet"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "violet"
+      }
+    ]
+  },
+  {
+    "id": "AL 007",
+    "category": "MINIMAL",
+    "price": 30,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "240 GSM MILL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "middle-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_black.png",
+    "images": [
+      "assets/cards/al-007-1.jpeg",
+      "assets/cards/al-007-2.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-007-1.jpeg",
+      "assets/cards/original/al-007-2.jpeg"
+    ],
+    "imageWatermarks": [
+      null,
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "AL 006",
+    "category": "MINIMAL",
+    "price": 44,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "240 GSM MILL TEXTURED WHITE + 320 GSM BASE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [
+      {
+        "name": "FOILING BLOCK",
+        "price": 800
+      }
+    ],
+    "applyWatermark": true,
+    "watermarkPos": "middle-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_green.png",
+    "images": [
+      "assets/cards/al-006-1.jpeg",
+      "assets/cards/al-006-2.jpeg",
+      "assets/cards/al-006-3.jpeg",
+      "assets/cards/al-006-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-006-1.jpeg",
+      "assets/cards/original/al-006-2.jpeg",
+      "assets/cards/original/al-006-3.jpeg",
+      "assets/cards/original/al-006-4.jpeg"
+    ],
+    "imageWatermarks": [
+      null,
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "green"
+      },
+      null,
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "id": "AL 005",
+    "category": "MODERN",
+    "price": 35,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "270 GSM SILVER METALIC + 240 GSM MILL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_white.png",
+    "images": [
+      "assets/cards/al-005-1.jpeg",
+      "assets/cards/al-005-2.jpeg",
+      "assets/cards/al-005-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-005-1.jpeg",
+      "assets/cards/original/al-005-2.jpeg",
+      "assets/cards/original/al-005-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "bottom-left",
+        "size": "medium",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "AL 004",
+    "category": "MODERN",
+    "price": 42,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "270 GSM GOLD METAKIC + 240 GSM MILL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_black.png",
+    "images": [
+      "assets/cards/al-004-1.jpeg",
+      "assets/cards/al-004-2.jpeg",
+      "assets/cards/al-004-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-004-1.jpeg",
+      "assets/cards/original/al-004-2.jpeg",
+      "assets/cards/original/al-004-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "large",
+        "color": "black"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "large",
+        "color": "white"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "AL 003",
+    "category": "MODERN",
+    "price": 42,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195MM X195 MM",
+    "material": "280 GSM PREMIUM JET BLACK + 240 GSM MILL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "middle-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_black.png",
+    "images": [
+      "assets/cards/al-003-1.jpeg",
+      "assets/cards/al-003-2.jpeg",
+      "assets/cards/al-003-3.jpeg",
+      "assets/cards/al-003-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-003-1.jpeg",
+      "assets/cards/original/al-003-2.jpeg",
+      "assets/cards/original/al-003-3.jpeg",
+      "assets/cards/original/al-003-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "black"
+      },
+      null,
+      null,
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "black"
+      }
+    ]
+  },
+  {
+    "id": "AL 002",
+    "category": "MODERN",
+    "price": 35,
+    "featured": false,
+    "minOrder": 100,
+    "size": "195MM X195 MM",
+    "material": "300 GSM SMOOTH RED + 240 GSM MILL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "bottom-left",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_red.png",
+    "images": [
+      "assets/cards/al-002-1.jpeg",
+      "assets/cards/al-002-2.jpeg",
+      "assets/cards/al-002-3.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-002-1.jpeg",
+      "assets/cards/original/al-002-2.jpeg",
+      "assets/cards/original/al-002-3.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "red"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "orange"
+      },
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "large",
+        "color": "white"
+      }
+    ]
+  },
+  {
+    "id": "AL 001",
+    "category": "MODERN",
+    "price": 35,
+    "featured": true,
+    "minOrder": 200,
+    "size": "195 MMX 195 MM",
+    "material": "270 GSM METALIC GREEN + 240 GSM MILL TEXTURED WHITE",
+    "description": "DIGITAL PRINTING",
+    "extraCharges": [],
+    "applyWatermark": true,
+    "watermarkPos": "middle-right",
+    "watermarkSize": "medium",
+    "watermarkPath": "assets/cards/watermark_green.png",
+    "images": [
+      "assets/cards/al-001-1.jpeg",
+      "assets/cards/al-001-2.jpeg",
+      "assets/cards/al-001-3.jpeg",
+      "assets/cards/al-001-4.jpeg"
+    ],
+    "originals": [
+      "assets/cards/original/al-001-1.jpeg",
+      "assets/cards/original/al-001-2.jpeg",
+      "assets/cards/original/al-001-3.jpeg",
+      "assets/cards/original/al-001-4.jpeg"
+    ],
+    "imageWatermarks": [
+      {
+        "apply": true,
+        "pos": "middle-left",
+        "size": "medium",
+        "color": "light_green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "large",
+        "color": "green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "medium",
+        "color": "light_green"
+      },
+      {
+        "apply": true,
+        "pos": "middle-right",
+        "size": "large",
+        "color": "light_green"
+      }
+    ]
+  }
+]
