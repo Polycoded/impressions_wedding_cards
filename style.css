@@ -1477,122 +1477,147 @@ section { padding: 100px 5%; }
 .modal-share-btn.copied svg {
     opacity: 0.7;
 }
-/* ============================================================
-   ALLURE PREMIUM ANIMATION CONTROLLER
-   ============================================================ */
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-// ---------- Shimmer loading ----------
-function showShimmer() {
-  productContainer.classList.add('loading');
+/* ---------- CUSTOM CURSOR ---------- */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: difference;
+    transition: transform 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out, background 0.15s;
+    will-change: transform;
 }
-function hideShimmer() {
-  productContainer.classList.remove('loading');
+.custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    background: rgba(182,141,83,0.2);
+    border-color: var(--gold-light);
 }
-
-// ---------- Scroll‑reveal (staggered fade + scale) ----------
-function animateCardsInView() {
-  const cards = document.querySelectorAll('.product-card:not([data-revealed])');
-  if (!cards.length) return;
-
-  cards.forEach((card, index) => {
-    card.setAttribute('data-revealed', 'true');
-
-    if (prefersReducedMotion) {
-      card.style.opacity = 1;
-      card.style.transform = 'translateY(0) scale(1)';
-      return;
-    }
-
-    // Scroll‑linked animation (identical logic to the demo’s layered reveal)
-    scroll(
-      animate(card, {
-        opacity: [0, 0, 1],
-        transform: [
-          'translateY(30px) scale(0.9)',
-          'translateY(30px) scale(0.9)',
-          'translateY(0) scale(1)'
-        ]
-      }, {
-        offset: [0, 0.35, 1],         // hold hidden for 35% of the scroll range
-        delay: index * 0.04,          // stagger each card
-        easing: cubicBezier(0.42, 0, 0.58, 1)   // smooth power1.inOut
-      }),
-      {
-        target: card,
-        offset: ['0% 90%', '0% 10%']   // start when 90% of card is visible, end at 10%
-      }
-    );
-  });
+.custom-cursor.click {
+    transform: scale(0.8);
 }
 
-// ---------- 3D Tilt on hover ----------
-function init3DTilt() {
-  if (prefersReducedMotion) return;
-
-  document.querySelectorAll('.product-card').forEach(card => {
-    // Remove old listeners to avoid duplicates
-    card.removeEventListener('mousemove', handleTiltMove);
-    card.removeEventListener('mouseleave', handleTiltLeave);
-
-    card.addEventListener('mousemove', handleTiltMove);
-    card.addEventListener('mouseleave', handleTiltLeave);
-  });
+/* ---------- SCROLL PROGRESS BAR ---------- */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--gold-dark), var(--gold-light));
+    z-index: 10001;
+    width: 0%;
+    box-shadow: 0 0 8px rgba(182,141,83,0.5);
 }
 
-function handleTiltMove(e) {
-  const card = this;
-  const rect = card.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  const centerX = rect.width / 2;
-  const centerY = rect.height / 2;
-
-  const rotateY = ((x - centerX) / centerX) * 7;   // ±7°
-  const rotateX = ((y - centerY) / centerY) * -7;
-
-  card.style.transform = `translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+/* ---------- BACK TO TOP ---------- */
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 400;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    cursor: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
-function handleTiltLeave() {
-  this.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
+/* ---------- PRELOADER COUNTER ---------- */
+.preloader-counter {
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: var(--ink-soft);
+    margin-top: 1rem;
+    opacity: 0;
 }
 
-// ---------- Smooth filter transition ----------
-let previousCards = [];
-
-function animateFilterChange(newCardsHTML) {
-  // Fade out old cards
-  const oldCards = [...productContainer.children].filter(el => el.classList.contains('product-card'));
-  oldCards.forEach(card => {
-    animate(card, { opacity: 0, scale: 0.9 }, { duration: 0.3, easing: cubicBezier(0.42, 0, 0.58, 1) });
-  });
-
-  // After a short delay, replace innerHTML and animate new cards in
-  setTimeout(() => {
-    productContainer.innerHTML = newCardsHTML;
-    hideShimmer();
-    animateCardsInView();
-    init3DTilt();
-  }, 300);
+/* ---------- HEADER GOLD LINE ---------- */
+.header-gold-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out);
+}
+.site-header.scrolled .header-gold-line {
+    transform: scaleX(1);
 }
 
-// ---------- Override your existing applyFilter to use animations ----------
-// (This replaces the simple innerHTML set in your original code)
-function applyFilterWithAnimation(filter) {
-  // … (your existing filter logic that builds filteredProducts and creates HTML) …
-  const newCardsHTML = filteredProducts
-    .slice(0, visibleCount)
-    .map(createCardHTML)
-    .join('');
-
-  if (previousCards.length > 0) {
-    animateFilterChange(newCardsHTML);
-  } else {
-    productContainer.innerHTML = newCardsHTML;
-    hideShimmer();
-    animateCardsInView();
-    init3DTilt();
-  }
-  previousCards = [...productContainer.querySelectorAll('.product-card')];
+/* ---------- PORTFOLIO REVEAL WRAPPER ---------- */
+.portfolio-reveal-wrapper {
+    transform-origin: center center;
+    will-change: transform;
 }
+
+/* Initial state for product cards (GSAP will animate) */
+.product-card {
+    opacity: 0;
+    transform: scale(0);
+    will-change: transform, opacity;
+}
+
+/* ---------- MODAL SHARE BUTTON (already in HTML, ensure styles) ---------- */
+.main-image-container {
+    position: relative;
+}
+.modal-share-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 12;
+    padding: 0;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    color: var(--ink-soft);
+}
+.modal-share-btn:hover {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(182,141,83,0.35);
+}
+.modal-share-btn.copied {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+    pointer-events: none;
+}
+.modal-share-btn.copied svg {
+    opacity: 0.7;
+}
+
+/* Ensure no conflict with existing styles - cursor for interactive elements overridden by GSAP custom cursor */
