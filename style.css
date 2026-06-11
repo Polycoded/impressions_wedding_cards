@@ -1477,3 +1477,122 @@ section { padding: 100px 5%; }
 .modal-share-btn.copied svg {
     opacity: 0.7;
 }
+/* ============================================================
+   ALLURE PREMIUM ANIMATION CONTROLLER
+   ============================================================ */
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ---------- Shimmer loading ----------
+function showShimmer() {
+  productContainer.classList.add('loading');
+}
+function hideShimmer() {
+  productContainer.classList.remove('loading');
+}
+
+// ---------- Scroll‑reveal (staggered fade + scale) ----------
+function animateCardsInView() {
+  const cards = document.querySelectorAll('.product-card:not([data-revealed])');
+  if (!cards.length) return;
+
+  cards.forEach((card, index) => {
+    card.setAttribute('data-revealed', 'true');
+
+    if (prefersReducedMotion) {
+      card.style.opacity = 1;
+      card.style.transform = 'translateY(0) scale(1)';
+      return;
+    }
+
+    // Scroll‑linked animation (identical logic to the demo’s layered reveal)
+    scroll(
+      animate(card, {
+        opacity: [0, 0, 1],
+        transform: [
+          'translateY(30px) scale(0.9)',
+          'translateY(30px) scale(0.9)',
+          'translateY(0) scale(1)'
+        ]
+      }, {
+        offset: [0, 0.35, 1],         // hold hidden for 35% of the scroll range
+        delay: index * 0.04,          // stagger each card
+        easing: cubicBezier(0.42, 0, 0.58, 1)   // smooth power1.inOut
+      }),
+      {
+        target: card,
+        offset: ['0% 90%', '0% 10%']   // start when 90% of card is visible, end at 10%
+      }
+    );
+  });
+}
+
+// ---------- 3D Tilt on hover ----------
+function init3DTilt() {
+  if (prefersReducedMotion) return;
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    // Remove old listeners to avoid duplicates
+    card.removeEventListener('mousemove', handleTiltMove);
+    card.removeEventListener('mouseleave', handleTiltLeave);
+
+    card.addEventListener('mousemove', handleTiltMove);
+    card.addEventListener('mouseleave', handleTiltLeave);
+  });
+}
+
+function handleTiltMove(e) {
+  const card = this;
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+
+  const rotateY = ((x - centerX) / centerX) * 7;   // ±7°
+  const rotateX = ((y - centerY) / centerY) * -7;
+
+  card.style.transform = `translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+}
+
+function handleTiltLeave() {
+  this.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
+}
+
+// ---------- Smooth filter transition ----------
+let previousCards = [];
+
+function animateFilterChange(newCardsHTML) {
+  // Fade out old cards
+  const oldCards = [...productContainer.children].filter(el => el.classList.contains('product-card'));
+  oldCards.forEach(card => {
+    animate(card, { opacity: 0, scale: 0.9 }, { duration: 0.3, easing: cubicBezier(0.42, 0, 0.58, 1) });
+  });
+
+  // After a short delay, replace innerHTML and animate new cards in
+  setTimeout(() => {
+    productContainer.innerHTML = newCardsHTML;
+    hideShimmer();
+    animateCardsInView();
+    init3DTilt();
+  }, 300);
+}
+
+// ---------- Override your existing applyFilter to use animations ----------
+// (This replaces the simple innerHTML set in your original code)
+function applyFilterWithAnimation(filter) {
+  // … (your existing filter logic that builds filteredProducts and creates HTML) …
+  const newCardsHTML = filteredProducts
+    .slice(0, visibleCount)
+    .map(createCardHTML)
+    .join('');
+
+  if (previousCards.length > 0) {
+    animateFilterChange(newCardsHTML);
+  } else {
+    productContainer.innerHTML = newCardsHTML;
+    hideShimmer();
+    animateCardsInView();
+    init3DTilt();
+  }
+  previousCards = [...productContainer.querySelectorAll('.product-card')];
+}
