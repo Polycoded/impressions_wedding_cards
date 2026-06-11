@@ -1,7 +1,9 @@
+import { animate, scroll, stagger, cubicBezier } from 'https://cdn.jsdelivr.net/npm/motion@11.11.16/+esm';
+
 // ============================================================
-// ALLURE – SCRIPTS
+// ALLURE – SCRIPTS (Premium animations integrated)
 // Preloader, header, mobile nav, portfolio, modal, calculator,
-// lightbox, WhatsApp, shareable card links
+// lightbox, WhatsApp, shareable card links + ALL ANIMATIONS
 // ============================================================
 
 /* ---------- PRELOADER ---------- */
@@ -98,7 +100,7 @@ window.addEventListener("scroll", () => {
 })();
 
 /* ============================================================
-   PORTFOLIO, MODAL, CALCULATOR, LIGHTBOX, SHARE
+   PORTFOLIO, MODAL, CALCULATOR, LIGHTBOX, SHARE + ANIMATIONS
    ============================================================ */
 (function () {
     'use strict';
@@ -153,9 +155,13 @@ window.addEventListener("scroll", () => {
     let currentExtraCharges = [];
     let currentSearchQuery  = '';
     let currentSort         = 'featured';
+    let previousCards       = [];   // for smooth filter transitions
 
     const yearEl = document.getElementById('currentYear');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* ---------- REDUCED MOTION CHECK ---------- */
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     /* ---------- UTILS ---------- */
     function getUniqueCategories() {
@@ -170,6 +176,105 @@ window.addEventListener("scroll", () => {
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;');
+    }
+
+    /* ---------- SHIMMER LOADING ---------- */
+    function showShimmer() {
+        productContainer.classList.add('loading');
+    }
+    function hideShimmer() {
+        productContainer.classList.remove('loading');
+    }
+
+    /* ---------- ANIMATION HELPERS ---------- */
+    function animateCardsInView() {
+        const cards = document.querySelectorAll('.product-card:not([data-revealed])');
+        if (!cards.length) return;
+
+        cards.forEach((card, index) => {
+            card.setAttribute('data-revealed', 'true');
+
+            if (prefersReducedMotion) {
+                card.style.opacity = 1;
+                card.style.transform = 'translateY(0) scale(1)';
+                return;
+            }
+
+            // Scroll‑linked staggered reveal (like the demo's layered grid)
+            scroll(
+                animate(card, {
+                    opacity: [0, 0, 1],
+                    transform: [
+                        'translateY(30px) scale(0.9)',
+                        'translateY(30px) scale(0.9)',
+                        'translateY(0) scale(1)'
+                    ]
+                }, {
+                    offset: [0, 0.35, 1],         // hold hidden for 35% of the scroll range
+                    delay: index * 0.04,          // stagger each card
+                    easing: cubicBezier(0.42, 0, 0.58, 1)   // smooth power1.inOut
+                }),
+                {
+                    target: card,
+                    offset: ['0% 90%', '0% 10%']   // start when 90% of card is visible, end at 10%
+                }
+            );
+        });
+    }
+
+    function init3DTilt() {
+        if (prefersReducedMotion) return;
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            // Remove old listeners to avoid duplicates
+            card.removeEventListener('mousemove', handleTiltMove);
+            card.removeEventListener('mouseleave', handleTiltLeave);
+
+            card.addEventListener('mousemove', handleTiltMove);
+            card.addEventListener('mouseleave', handleTiltLeave);
+        });
+    }
+
+    function handleTiltMove(e) {
+        const card = e.currentTarget;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateY = ((x - centerX) / centerX) * 7;   // ±7°
+        const rotateX = ((y - centerY) / centerY) * -7;
+
+        card.style.transform = `translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    }
+
+    function handleTiltLeave(e) {
+        const card = e.currentTarget;
+        card.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
+    }
+
+    // Smooth filter transition: old cards fade out, new ones stagger in
+    function animateFilterChange(newCardsHTML) {
+        const oldCards = [...productContainer.children].filter(el => el.classList.contains('product-card'));
+        if (oldCards.length === 0) {
+            productContainer.innerHTML = newCardsHTML;
+            hideShimmer();
+            animateCardsInView();
+            init3DTilt();
+            return;
+        }
+
+        oldCards.forEach(card => {
+            animate(card, { opacity: 0, scale: 0.9 }, { duration: 0.25, easing: cubicBezier(0.42, 0, 0.58, 1) });
+        });
+
+        setTimeout(() => {
+            productContainer.innerHTML = newCardsHTML;
+            hideShimmer();
+            animateCardsInView();
+            init3DTilt();
+        }, 260);
     }
 
     /* ---------- DATA LOAD ---------- */
@@ -187,6 +292,7 @@ window.addEventListener("scroll", () => {
                 description: p.description || DEFAULT_DESC
             }));
 
+            showShimmer();   // start shimmer effect
             buildCategoryMenu();
             buildFilterButtons();
             applyFilter('All');
@@ -334,20 +440,25 @@ window.addEventListener("scroll", () => {
         }
 
         visibleCount = Math.min(ITEMS_PER_PAGE, filteredProducts.length);
-        productContainer.innerHTML = '';
+        const newCardsHTML = filteredProducts
+            .slice(0, visibleCount)
+            .map(createCardHTML)
+            .join('');
 
-        if (filteredProducts.length === 0) {
-            productContainer.innerHTML = '<p class="no-products">No designs found.</p>';
+        // Use animated filter transition if there were previous cards
+        if (previousCards.length > 0) {
+            animateFilterChange(newCardsHTML);
         } else {
-            productContainer.innerHTML = filteredProducts
-                .slice(0, visibleCount)
-                .map(createCardHTML)
-                .join('');
+            productContainer.innerHTML = newCardsHTML;
+            hideShimmer();
+            animateCardsInView();
+            init3DTilt();
         }
+        previousCards = [...productContainer.querySelectorAll('.product-card')];
         updateShowMoreBtn();
     }
 
-    /* ---------- CARD HTML (no share button here) ---------- */
+    /* ---------- CARD HTML (no share button on card, that's in modal) ---------- */
     function createCardHTML(product) {
         const productJson  = encodeURIComponent(JSON.stringify(product));
         const featuredBadge = product.featured
@@ -358,8 +469,6 @@ window.addEventListener("scroll", () => {
         const thumbSrc = mainImage 
             ? mainImage.replace('/cards/', '/cards/thumb/') 
             : 'assets/cards/placeholder.jpg';
-
-        // No share button on product cards – it's now on the modal
 
         return `
             <div class="product-card">
@@ -405,6 +514,9 @@ window.addEventListener("scroll", () => {
         productContainer.insertAdjacentHTML('beforeend', newHTML);
         visibleCount = nextCount;
         updateShowMoreBtn();
+        // Animate newly added cards
+        animateCardsInView();
+        init3DTilt();
     });
 
     function updateShowMoreBtn() {
@@ -503,7 +615,6 @@ window.addEventListener("scroll", () => {
     if (modalShareBtn) {
         modalShareBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            // The URL is already the shareable one with #card=ID
             const shareUrl = window.location.href;
             navigator.clipboard.writeText(shareUrl).then(() => {
                 modalShareBtn.classList.add('copied');
